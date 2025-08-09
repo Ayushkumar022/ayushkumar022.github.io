@@ -40,8 +40,7 @@
 
         h1 {
             font-size: 2.8rem;
-            margin-bottom: 0;
-            text-align: center;
+            margin-bottom: 5px; /* Adjusted margin */
         }
 
         h2 {
@@ -61,17 +60,37 @@
             color: var(--primary-color);
         }
 
-        /* --- Header --- */
-        .header {
-            text-align: center;
+        /* --- NEW: Intro Section with Profile Picture --- */
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 40px; /* Space between picture and text */
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
             margin-bottom: 30px;
         }
-        .header p {
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes the image a circle */
+            border: 5px solid var(--primary-color);
+            object-fit: cover; /* Prevents image stretching */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .intro-text h1 {
+            text-align: left; /* Aligns text to the left */
+        }
+
+        .intro-text .contact-info {
             font-size: 1.1rem;
             color: #666;
+            margin-bottom: 15px;
         }
-        .contact-links a {
-            margin: 0 10px;
+
+        .intro-text .contact-links a {
+            margin-right: 15px;
             font-weight: bold;
         }
         
@@ -152,6 +171,15 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
+            /* On mobile, stack the image on top of the text */
+            .intro-section {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .intro-text h1 {
+                text-align: center;
+            }
             h1 {
                 font-size: 2.2rem;
             }
@@ -165,13 +193,16 @@
 
     <div class="container">
 
-        <header class="header">
-            <h1>Ayush Kumar</h1>
-            <p>Jaipur, Rajasthan | ayushshaw022@gmail.com</p>
-            <div class="contact-links">
-                <a href="https://linkedin.com/in/ayush-kumar-01173a205/" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/Ayushkumar022" target="_blank">GitHub</a> |
-                <a href="https://leetcode.com/u/Ayushkumar022/" target="_blank">LeetCode</a>
+        <header class="intro-section">
+            <img src="https://github.com/Ayushkumar022.png" alt="Profile Picture of Ayush Kumar" class="profile-picture">
+            <div class="intro-text">
+                <h1>Ayush Kumar</h1>
+                <p class="contact-info">Jaipur, Rajasthan | ayushshaw022@gmail.com</p>
+                <div class="contact-links">
+                    <a href="https://linkedin.com/in/ayush-kumar-01173a205/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Ayushkumar022" target="_blank">GitHub</a>
+                    <a href="https://leetcode.com/u/Ayushkumar022/" target="_blank">LeetCode</a>
+                </div>
             </div>
         </header>
 
