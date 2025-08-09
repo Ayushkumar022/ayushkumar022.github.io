@@ -40,7 +40,7 @@
 
         h1 {
             font-size: 2.8rem;
-            margin-bottom: 5px; /* Adjusted margin */
+            margin-bottom: 5px;
         }
 
         h2 {
@@ -60,11 +60,11 @@
             color: var(--primary-color);
         }
 
-        /* --- NEW: Intro Section with Profile Picture --- */
+        /* --- Header / Intro Section --- */
         .intro-section {
             display: flex;
             align-items: center;
-            gap: 40px; /* Space between picture and text */
+            gap: 40px;
             padding: 20px 0;
             border-bottom: 1px solid #ddd;
             margin-bottom: 30px;
@@ -73,14 +73,14 @@
         .profile-picture {
             width: 150px;
             height: 150px;
-            border-radius: 50%; /* Makes the image a circle */
+            border-radius: 50%;
             border: 5px solid var(--primary-color);
-            object-fit: cover; /* Prevents image stretching */
+            object-fit: cover;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         .intro-text h1 {
-            text-align: left; /* Aligns text to the left */
+            text-align: left;
         }
 
         .intro-text .contact-info {
@@ -117,15 +117,15 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* --- Projects Section --- */
-        .project-grid {
+        /* --- Projects & Contributions Section --- */
+        .card-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 20px;
         }
 
-        .project-card {
+        .card {
             background: var(--card-background);
             border-left: 5px solid var(--primary-color);
             padding: 25px;
@@ -133,17 +133,24 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .project-card:hover {
+        .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.12);
         }
-        .project-card h3 {
+        .card h3 {
             margin-top: 0;
             font-size: 1.5rem;
             color: var(--primary-color);
         }
-        .project-card p {
-            margin-bottom: 0;
+        .card p {
+            margin: 10px 0 0 0;
+        }
+
+        /* Style for the link inside the card */
+        .card a {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
         }
         
         /* --- Education & Certifications --- */
@@ -171,7 +178,6 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            /* On mobile, stack the image on top of the text */
             .intro-section {
                 flex-direction: column;
                 gap: 20px;
@@ -236,22 +242,33 @@
 
             <section id="projects">
                 <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
+                <div class="card-grid">
+                    <div class="card">
                         <h3>Homestays Website | Full-Stack MERN Application</h3>
                         <p>Engineered a full-stack web application for booking and managing homestays using the MERN stack. Implemented robust user authentication, dynamic property listings, a comprehensive booking management system, and integrated a secure payment gateway.</p>
                     </div>
-                    <div class="project-card">
+                    <div class="card">
                         <h3>Amazon Clone Webpage | Frontend Development</h3>
                         <p>Designed and built a responsive, pixel-perfect clone of the Amazon homepage using advanced HTML and CSS techniques to replicate the user interface and experience.</p>
                     </div>
-                    <div class="project-card">
+                    <div class="card">
                         <h3>Currency Converter | Web Application</h3>
                         <p>Developed a dynamic currency converter with a user-friendly interface using HTML, CSS, and JavaScript, consuming a third-party API for real-time exchange rates.</p>
                     </div>
-                    <div class="project-card">
+                    <div class="card">
                         <h3>Diabetes Prediction | Machine Learning</h3>
                         <p>Applied machine learning algorithms in Python to accurately predict the onset of diabetes based on patient health records, achieving high accuracy through data preprocessing and model tuning.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contributions">
+                <h2>Open Source Contributions</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Welcome-to-Open-Source</h3>
+                        <p>Contributed to this popular introductory open-source project by adding my profile to the main contributors list in the README file.</p>
+                        <a href="https://github.com/basedharsh/Welcome-to-Open-Source/pull/22" target="_blank">View Pull Request</a>
                     </div>
                 </div>
             </section>
