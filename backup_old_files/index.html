@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Kumar | Portfolio</title>
+    <style>
+        /* --- Google Fonts & Basic Setup --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #2c3e50; /* Dark Blue/Charcoal */
+            --secondary-color: #3498db; /* Professional Blue */
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --card-background: #ffffff;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- Layout & Container --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Header / Intro Section --- */
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-color);
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .intro-text h1 {
+            text-align: left;
+        }
+
+        .intro-text .contact-info {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .intro-text .contact-links a {
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        /* --- Sections --- */
+        section {
+            padding: 20px 0;
+        }
+
+        /* --- Skills Section --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* --- Projects & Contributions Section --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--card-background);
+            border-left: 5px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        .card p {
+            margin: 10px 0 0 0;
+        }
+
+        /* Style for the link inside the card */
+        .card a {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        /* --- Education & Certifications --- */
+        .education-entry, .certification-entry {
+            margin-bottom: 15px;
+        }
+        .education-entry h3, .certification-entry h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .education-entry p, .certification-entry p {
+            margin: 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .intro-section {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .intro-text h1 {
+                text-align: center;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="intro-section">
+            <img src="https://github.com/Ayushkumar022.png" alt="Profile Picture of Ayush Kumar" class="profile-picture">
+            <div class="intro-text">
+                <h1>Ayush Kumar</h1>
+                <p class="contact-info">Jaipur, Rajasthan | ayushshaw022@gmail.com</p>
+                <div class="contact-links">
+                    <a href="https://linkedin.com/in/ayush-kumar-01173a205/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Ayushkumar022" target="_blank">GitHub</a>
+                    <a href="https://leetcode.com/u/Ayushkumar022/" target="_blank">LeetCode</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="summary">
+                <h2>Professional Summary</h2>
+                <p>
+                    A motivated and detail-oriented Computer Science student with a strong foundation in Data Structures, Algorithms, and full-stack web development. Specializing in the MERN stack, I have hands-on experience building dynamic web applications with features like user authentication and secure payments. Eager to apply my problem-solving skills and passion for technology to a challenging internship role.
+                </p>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Data Structures & Algorithms</span>
+                    <span class="skill-tag">OS</span>
+                    <span class="skill-tag">DBMS</span>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="card-grid">
+			<div class="card">
+    				<h3>Bank Management System | C++ & Docker</h3>
+    				<p>A full-featured banking application built in C++ and containerized with Docker. Features a server with API endpoints for creating accounts, viewing balances, and performing transactions, with data persisted in an SQLite database.</p>
+    				<a href="https://github.com/Ayushkumar022/Bank-Management-System" target="_blank">View on GitHub</a>
+			</div>
+                    <div class="card">
+                        <h3>Homestays Website | Full-Stack MERN Application</h3>
+                        <p>Engineered a full-stack web application for booking and managing homestays using the MERN stack. Implemented robust user authentication, dynamic property listings, a comprehensive booking management system, and integrated a secure payment gateway.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Amazon Clone Webpage | Frontend Development</h3>
+                        <p>Designed and built a responsive, pixel-perfect clone of the Amazon homepage using advanced HTML and CSS techniques to replicate the user interface and experience.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Currency Converter | Web Application</h3>
+                        <p>Developed a dynamic currency converter with a user-friendly interface using HTML, CSS, and JavaScript, consuming a third-party API for real-time exchange rates.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Diabetes Prediction | Machine Learning</h3>
+                        <p>Applied machine learning algorithms in Python to accurately predict the onset of diabetes based on patient health records, achieving high accuracy through data preprocessing and model tuning.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contributions">
+                <h2>Open Source Contributions</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Welcome-to-Open-Source</h3>
+                        <p>Contributed to this popular introductory open-source project by adding my profile to the main contributors list in the README file.</p>
+                        <a href="https://github.com/basedharsh/Welcome-to-Open-Source/pull/22" target="_blank">View Pull Request</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-entry">
+                    <h3>University of Engineering & Management, Jaipur</h3>
+                    <p>B.Tech in Computer Science and Engineering | Expected 2026</p>
+                    <p>Current CGPA: 7.34 | SGPA (Sem 5): 8.23</p>
+                </div>
+                <div class="education-entry">
+                    <h3>GGPS, Bokaro Steel City, Jharkhand</h3>
+                    <p>Class XII | 2021 | Percentage: 76.0%</p>
+                </div>
+            </section>
+
+            <section id="certifications">
+                <h2>Certifications</h2>
+                 <div class="certification-entry">
+                    <h3>NPTEL Certified: Training and Development (75%)</h3>
+                </div>
+                <div class="certification-entry">
+                    <h3>NPTEL Certified: Problem Solving Through Programming in C</h3>
+                </div>
+                <div class="certification-entry">
+                    <h3>NPTEL Certified: Python for Data Science</h3>
+                </div>
+                <div class="certification-entry">
+                    <h3>NPTEL Certified: Fundamental Algorithms: Design And Analysis</h3>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Ayush Kumar. All Rights Reserved.</p>
+        </footer>
+        
+    </div>
+
+</body>
+</html>
